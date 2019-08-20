@@ -2,6 +2,7 @@
 *.log
 packages
 target
+target/*
 config-files/master_key
 config-files/master_key.pub
 
