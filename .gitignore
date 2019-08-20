@@ -1,0 +1,7 @@
+.vagrant
+*.log
+packages
+target
+config-files/master_key
+config-files/master_key.pub
+
