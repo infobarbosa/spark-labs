@@ -3,6 +3,6 @@
 packages
 target
 target/*
-config-files/master_key
-config-files/master_key.pub
+config-files/id_rsa
+config-files/id_rsa.pub
 
