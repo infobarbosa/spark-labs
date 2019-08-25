@@ -18,7 +18,7 @@ object BolsaFamiliaDF extends App {
                         .option("inferSchema", "true")
                         .option("delimiter", ";")
                         .option("encoding", "ISO-8859-1")
-                        .load("hdfs:///bolsafamilia/201811/pagamentos.csv")
+                        .load("hdfs:///bolsafamilia/pagamentos.csv")
                         .toDF("referencia", "competencia", "uf", "cd_mun", "ds_mun", "cpf", "favorecido", "valor_parcela")
 
     rawPayments.printSchema()
