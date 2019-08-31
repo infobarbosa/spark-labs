@@ -34,7 +34,7 @@ wget https://archive.apache.org/dist/spark/spark-2.3.2/spark-2.3.2-bin-hadoop2.7
 ###spark-submit
 ```
 hdfs dfs -mkdir /bolsafamilia
-hdfs dfs -put pagamentos.csv /bolsafamilia
+hdfs dfs -put /vagrant/pagamentos.csv /bolsafamilia
 hdfs dfs -ls /bolsafamilia
 
 export HADOOP_USER_NAME=hadoop
@@ -53,7 +53,7 @@ spark-submit \
   --deploy-mode client \
   --executor-memory 1G \
   --num-executors 10 \
-  target/scala-2.11/sparklabs_2.11-0.1.jar
+  /vagrant/target/scala-2.11/sparklabs_2.11-0.1.jar
 
 ```
 
