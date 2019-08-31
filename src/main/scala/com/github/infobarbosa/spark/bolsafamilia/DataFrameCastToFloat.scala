@@ -8,7 +8,6 @@ object DataFrameCastToFloat {
     val spark = SparkSession
       .builder()
       .appName("BolsaFamiliaDF")
-      .master("local[2]")
       .getOrCreate()
 
     val rawPayments = spark.read

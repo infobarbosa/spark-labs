@@ -3,7 +3,7 @@ package com.github.infobarbosa.spark.bolsafamilia
 import org.apache.spark.{SparkConf, SparkContext}
 
 object BolsaFamiliaRDD extends App{
-  val conf = new SparkConf().setAppName("BolsaFamilia").setMaster("local[3]")
+  val conf = new SparkConf().setAppName("BolsaFamilia")
   val sc = new SparkContext(conf)
 
   val rawPayments = sc.textFile("in/201811_BolsaFamilia_Pagamentos.csv")

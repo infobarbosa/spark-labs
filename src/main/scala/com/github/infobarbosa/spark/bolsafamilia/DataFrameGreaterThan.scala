@@ -9,7 +9,6 @@ object DataFrameGreaterThan extends App{
     val spark = SparkSession
       .builder()
       .appName("BolsaFamiliaDF")
-      .master("local[2]")
       .getOrCreate()
 
     val manualSchema = StructType(Array(

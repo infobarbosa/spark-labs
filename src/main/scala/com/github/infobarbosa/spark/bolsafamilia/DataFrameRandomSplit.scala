@@ -7,7 +7,6 @@ object DataFrameRandomSplit extends App{
     val spark = SparkSession
       .builder()
       .appName("BolsaFamiliaDF")
-      .master("local[2]")
       .getOrCreate()
 
     val rawPayments = spark.read
