@@ -37,7 +37,6 @@ sed -i "/export[[:space:]]JAVA_HOME=/ s:=.*:=/usr/lib/jvm/java-8-openjdk-amd64/j
 su hadoop -c 'touch /opt/hadoop/etc/hadoop/workers' 
 echo "node1" >> /opt/hadoop/etc/hadoop/workers
 echo "node2" >> /opt/hadoop/etc/hadoop/workers
-echo "node3" >> /opt/hadoop/etc/hadoop/workers
 
 su hadoop -c 'mkdir -p /home/hadoop/.ssh'
 chmod 700 /home/hadoop/.ssh
@@ -59,4 +58,3 @@ su hadoop -c "touch /opt/spark/conf/slaves"
 echo "master" >> /opt/spark/conf/slaves
 echo "node1" >> /opt/spark/conf/slaves
 echo "node2" >> /opt/spark/conf/slaves
-echo "node3" >> /opt/spark/conf/slaves
