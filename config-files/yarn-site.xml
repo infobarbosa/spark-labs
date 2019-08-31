@@ -7,7 +7,7 @@
 
         <property>
                 <name>yarn.resourcemanager.hostname</name>
-                <value>192.168.15.40</value>
+                <value>192.168.56.40</value>
         </property>
 
         <property>
@@ -16,21 +16,37 @@
         </property>
         <property>
                 <name>yarn.nodemanager.resource.memory-mb</name>
-                <value>384</value>
+                <value>1536</value>
         </property>
 
         <property>
                 <name>yarn.scheduler.maximum-allocation-mb</name>
-                <value>384</value>
+                <value>1536</value>
         </property>
 
         <property>
                 <name>yarn.scheduler.minimum-allocation-mb</name>
-                <value>32</value>
+                <value>128</value>
         </property>
 
         <property>
                 <name>yarn.nodemanager.vmem-check-enabled</name>
                 <value>false</value>
         </property>
+        <property>
+                <name>yarn.application.classpath</name>
+                <value>$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*,$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/*</value>
+        </property>
+        <property>
+                <name>yarn.resourcemanager.resource-tracker.address</name>
+                <value>192.168.56.40:8025</value>
+        </property>
+        <property>
+                <name>yarn.resourcemanager.scheduler.address</name>
+                <value>192.168.56.40:8030</value>
+        </property>
+        <property>
+                <name>yarn.resourcemanager.address</name>
+                <value>192.168.56.40:8050</value>
+        </property>        
 </configuration>
