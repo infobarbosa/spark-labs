@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.41"
-    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.41"
+    #hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.41"
     hadoop.vm.hostname = "node1.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.42"
-    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.42"
+    #hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.42"
     hadoop.vm.hostname = "node2.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.40"
-    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.40"
+    #hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.40"
     hadoop.vm.hostname = "master.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
