@@ -6,4 +6,4 @@ target/*
 project/target
 config-files/id_rsa
 config-files/id_rsa.pub
-
+*.backup
