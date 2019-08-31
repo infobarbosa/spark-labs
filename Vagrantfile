@@ -8,11 +8,11 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.41"
-    hadoop.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)", ip: "192.168.15.41"
+    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.41"
     hadoop.vm.hostname = "node1.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
-      v.cpus = 1
+      v.cpus = 4
       v.name = "node1-lab-hadoop.vagrant"
     end
 
@@ -36,40 +36,12 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.42"
-    hadoop.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)", ip: "192.168.15.42"
+    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.42"
     hadoop.vm.hostname = "node2.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
-      v.cpus = 1
+      v.cpus = 4
       v.name = "node2-lab-hadoop.vagrant"
-    end
-
-    hadoop.vm.provision "file", source: "config-files/core-site.xml", destination: "core-site.xml"
-    hadoop.vm.provision "file", source: "config-files/hdfs-site.xml", destination: "hdfs-site.xml"
-    hadoop.vm.provision "file", source: "config-files/yarn-site.xml", destination: "yarn-site.xml"
-    hadoop.vm.provision "file", source: "config-files/mapred-site.xml", destination: "mapred-site.xml"
-    hadoop.vm.provision "file", source: "config-files/hosts", destination: "hosts"
-    hadoop.vm.provision "file", source: "config-files/id_rsa", destination: "id_rsa"
-    hadoop.vm.provision "file", source: "config-files/id_rsa.pub", destination: "id_rsa.pub"
-    hadoop.vm.provision "file", source: "packages/hadoop-3.2.0.tar.gz", destination: "hadoop-3.2.0.tar.gz"
-    hadoop.vm.provision "file", source: "packages/spark-2.3.2-bin-hadoop2.7.tgz", destination: "spark-2.3.2-bin-hadoop2.7.tgz"
-
-    #root script
-    hadoop.vm.provision "shell", path: "script.sh"
-  end
-
-  #####################
-  #configuracao da instancia do node3
-  config.vm.define "node3" do |hadoop|
-    hadoop.vm.box = "ubuntu/xenial64"
-
-    hadoop.vm.network "private_network", ip: "192.168.56.43"
-    hadoop.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)", ip: "192.168.15.43"
-    hadoop.vm.hostname = "node3.infobarbosa.github.com"
-    hadoop.vm.provider "virtualbox" do |v|
-      v.memory = 2048
-      v.cpus = 1
-      v.name = "node3-lab-hadoop.vagrant"
     end
 
     hadoop.vm.provision "file", source: "config-files/core-site.xml", destination: "core-site.xml"
@@ -92,11 +64,11 @@ Vagrant.configure("2") do |config|
     hadoop.vm.box = "ubuntu/xenial64"
 
     hadoop.vm.network "private_network", ip: "192.168.56.40"
-    hadoop.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)", ip: "192.168.15.40"
+    hadoop.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.15.40"
     hadoop.vm.hostname = "master.infobarbosa.github.com"
     hadoop.vm.provider "virtualbox" do |v|
       v.memory = 2048
-      v.cpus = 1
+      v.cpus = 4
       v.name = "master-lab-hadoop.vagrant"
     end
 
